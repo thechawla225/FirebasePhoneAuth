@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "286945997048",
+    "project_id": "liveasytask-c6248",
+    "storage_bucket": "liveasytask-c6248.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286945997048:android:8810643ba26fae90f10b0d",
+        "android_client_info": {
+          "package_name": "com.ankitchawla.liveasytask"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "286945997048-l193c4qopl2qb86dahsgbcuponbt0afa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ankitchawla.liveasytask",
+            "certificate_hash": "0d2335993b0ce85d028b2f1bc190b87ab537ef81"
+          }
+        },
+        {
+          "client_id": "286945997048-lcnpof51fvjq9i0jj96diqbvsja31nlf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFEDCj-S4xhXARo93dhH-94FyCuKoOHTE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "286945997048-lcnpof51fvjq9i0jj96diqbvsja31nlf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
