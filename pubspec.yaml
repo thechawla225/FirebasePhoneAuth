@@ -30,6 +30,7 @@ dependencies:
   pinput:
   flag: ^3.2.2
   pin_code_fields: ^7.1.0
+  firebase_phone_auth_handler:
 
 
   # The following adds the Cupertino Icons font to your application.

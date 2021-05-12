@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:liveasytask/enterno.dart';
 import 'package:proste_bezier_curve/proste_bezier_curve.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_phone_auth_handler/firebase_phone_auth_handler.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: MyApp()));
+  runApp(FirebasePhoneAuthSupporter(child: MaterialApp(debugShowCheckedModeBanner: false, home: MyApp())));
 }
 
 class MyApp extends StatefulWidget {

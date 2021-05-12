@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:liveasytask/otpscreen.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flag/flag.dart';
 import 'otpscreen.dart';
 
@@ -12,14 +10,10 @@ class EnterNum extends StatefulWidget {
 }
 
 class _EnterNumState extends State<EnterNum> {
-  String vid;
   String phonenum;
-  FirebaseAuth auth = FirebaseAuth.instance;
 
-  void saveform()
-  {
-    if(formkey.currentState.validate())
-    {
+  void saveform() {
+    if (formkey.currentState.validate()) {
       formkey.currentState.save();
     }
   }
@@ -59,7 +53,7 @@ class _EnterNumState extends State<EnterNum> {
                   height: 10,
                 ),
                 Text(
-                  "You'll recieve a 4 digit code'",
+                  "You'll recieve a 4 digit code",
                   style: TextStyle(fontSize: 15, color: Colors.blueGrey),
                 ),
                 Text(
@@ -98,18 +92,15 @@ class _EnterNumState extends State<EnterNum> {
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: 15),
                               ),
-                                Padding(
-                                  padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                                  child: Container(
-                                    width: 8,
-
-                                    child: Divider(
-                                      thickness: 2,
-                                      color: Colors.black
-                                    ),
-                                  ),
-                                )
-                             ,
+                              Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 15.0),
+                                child: Container(
+                                  width: 8,
+                                  child: Divider(
+                                      thickness: 2, color: Colors.black),
+                                ),
+                              ),
                               Container(
                                 width: 180,
                                 child: TextFormField(
@@ -143,23 +134,15 @@ class _EnterNumState extends State<EnterNum> {
                       GestureDetector(
                         onTap: () async {
                           saveform();
-                          await auth.verifyPhoneNumber(
-                              phoneNumber: phonenum,
-                              verificationCompleted:
-                                  (phoneAuthCredential) async {},
-                              verificationFailed: (verificationFailed) async {},
-                              codeSent:
-                                  (verificationId, resendingToken) async {
-                                    this.vid = verificationId; 
-                                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => OtpScreen(vid, phonenum, auth)));
-                                  },
-                              codeAutoRetrievalTimeout:
-                                  (verificationId) async {});
+
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => OtpScreen(phonenum)));
+                          
                         },
                         child: Container(
                           width: MediaQuery.of(context).size.width * .90,
                           height: 55,
-                          color: Color.fromARGB(255,46,59,98),
+                          color: Color.fromARGB(255, 46, 59, 98),
                           child: Center(
                               child: Text(
                             "CONTINUE",
