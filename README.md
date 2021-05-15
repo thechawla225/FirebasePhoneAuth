@@ -1,4 +1,4 @@
-# liveasytask
+# FireBasePhoneAuth
 
 live easy internship task
 
